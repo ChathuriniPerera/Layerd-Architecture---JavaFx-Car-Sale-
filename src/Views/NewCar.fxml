@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="686.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewCarCtrl">
+   <children>
+      <Label layoutX="84.0" layoutY="26.0" prefHeight="27.0" prefWidth="100.0" text="Car Details">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="61.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-garage-80.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="478.0" layoutY="16.0" onAction="#btnAddNew_OnAction" prefHeight="34.0" prefWidth="87.0" text="+New Car">
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="txtEngine" labelFloat="true" layoutX="21.0" layoutY="86.0" prefHeight="29.0" prefWidth="406.0" promptText="Engine / Chassis Number :">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtCnum" labelFloat="true" layoutX="231.0" layoutY="226.0" prefHeight="29.0" prefWidth="150.0" promptText="Car Number :">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPrice" labelFloat="true" layoutX="231.0" layoutY="178.0" prefHeight="29.0" prefWidth="150.0" promptText="Price :">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtBname" labelFloat="true" layoutX="231.0" layoutY="134.0" prefHeight="29.0" prefWidth="150.0" promptText="Brand Name :">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDistance" labelFloat="true" layoutX="21.0" layoutY="178.0" prefHeight="29.0" prefWidth="160.0" promptText="Distance :">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtColor" labelFloat="true" layoutX="24.0" layoutY="226.0" prefHeight="29.0" prefWidth="160.0" promptText="Colour">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnSave" layoutX="333.0" layoutY="271.0" onAction="#btnSave_OnAction" prefHeight="27.0" prefWidth="76.0" text="Save">
+         <font>
+            <Font size="13.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="txtOcontact" labelFloat="true" layoutX="430.0" layoutY="228.0" promptText="Owner Contact" />
+      <JFXTextField fx:id="txtOname" labelFloat="true" layoutX="430.0" layoutY="180.0" promptText="Owner Name" />
+      <JFXTextField fx:id="txtOaddress" labelFloat="true" layoutX="430.0" layoutY="274.0" promptText="Owner Address" />
+      <JFXComboBox fx:id="cmbModelName" labelFloat="true" layoutX="21.0" layoutY="136.0" prefHeight="25.0" prefWidth="160.0" promptText="Model Name" />
+      <TableView fx:id="tblCar" layoutX="5.0" layoutY="319.0" prefHeight="351.0" prefWidth="639.0">
+        <columns>
+          <TableColumn prefWidth="142.0" text="Engine/ Chassis number" />
+          <TableColumn prefWidth="77.0" text="Car Number" />
+            <TableColumn prefWidth="59.0" text="Distance" />
+            <TableColumn prefWidth="45.0" text="Colour" />
+            <TableColumn prefWidth="85.0" text="Price" />
+            <TableColumn minWidth="0.0" prefWidth="145.0" text="Model Name" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtOid" labelFloat="true" layoutX="430.0" layoutY="136.0" promptText="Owner ID" />
+      <JFXButton fx:id="btnFind" layoutX="478.0" layoutY="88.0" onAction="#btnFind_onAction" prefHeight="29.0" prefWidth="100.0" text="Find" />
+   </children>
+</AnchorPane>
